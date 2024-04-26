@@ -1,6 +1,5 @@
 ﻿using ExileCore;
 using ExileCore.PoEMemory;
-using ExileCore.PoEMemory.Components;
 using ExileCore.PoEMemory.MemoryObjects;
 using SharpDX;
 using System.Collections.Generic;
@@ -99,7 +98,6 @@ public class WhereIsMyShrine : BaseSettingsPlugin<Settings>
         foreach (var shrineEntity in shrineList)
         {
             shrineEntity.TryGetComponent<Shrine>(out var shrineComp);
-            shrineEntity.TryGetComponent<Render>(out var renderComp);
 
             if (shrineComp is {IsAvailable: true})
             {
